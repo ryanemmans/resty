@@ -2,7 +2,7 @@
   "name": "resty",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ryanemmans.github.io/resty/",
+  "homepage": "https://ryanemmans.github.io/resty/public/index.html",
   "dependencies": {
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^11.2.7",
