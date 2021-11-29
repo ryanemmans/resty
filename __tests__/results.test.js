@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
-import Results from '../components/results/Results.js';
+import Results from '../src/components/results/Results.js';
 
 describe('Testing the Results component', () => {
   it('Should render data.text', () => {
