@@ -3,22 +3,64 @@ $radius: 40%;
 
 form {
   display: inline-block;
-  margin: auto;
+  margin: 8rem auto 1.5rem auto;
   width: 200px;
 
   label {
     display: flex;
     margin: 1rem 0;
 
+    &.input {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #urlInput {
+      border: none;
+      border-bottom: thin solid deepskyblue;
+      min-width: 25rem;
+      margin: .4rem;
+      height: 1.5rem;
+    }
+
+    #go {
+      background-color: lightpink;
+      border: none;
+      padding: .25rem .5rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 700;
+
+      &:hover {
+        background: deeppink;
+        color: white;
+        transition: .2s ease-in-out;
+        transform: scale(1.1);
+      }
+    }
+
     &.methods {
+      justify-content: center;
       span {
         cursor: pointer;
-        margin-right: 1rem;
+        margin: 0rem .3rem;
         padding: .25rem .5rem;
-        background: #ccc;
+        background: lightblue;
+        border-radius: 5px;
+        font-weight: 700;
 
-        &:hover, &.active {
-          background: #fff;
+        &:hover {
+          background: deepskyblue;
+          color: white;
+          transition: .2s ease-in-out;
+          transform: scale(1.1);
+        }
+
+        &.active {
+          background: black;
+          color: white;
+          transform: scale(1.1);
         }
       }
     }

@@ -1,11 +1,9 @@
 //npm run build to deploy anywhere
 
 import React from 'react';
-
+import axios from 'axios';
 import './design/app.scss';
 
-// Let's talk about using index.js and some other name in the component folder
-// There's pros and cons for each way of doing this...
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import Form from './components/form/Form';
@@ -21,26 +19,28 @@ class App extends React.Component {
     };
   }
 
-  callApi = (requestParams) => {
-    // mock output
+  callApi = async (requestParams) => {
+    let API_URL = requestParams.url;
+    const response = await axios.get(API_URL);
     const data = {
-      count: 2,
-      results: [
-        {name: 'fake thing 1', url: 'http://fakethings.com/1'},
-        {name: 'fake thing 2', url: 'http://fakethings.com/2'},
-      ],
+      Headers: response.headers,
+      count: response.data.count,
+      Response: response.data.results
     };
-    this.setState({data, requestParams});
+    this.setState({ data, requestParams });
   }
 
   render() {
     return (
       <React.Fragment>
         <Header />
-        <div>Request Method: {this.state.requestParams.method}</div>
-        <div>URL: {this.state.requestParams.url}</div>
         <Form handleApiCall={this.callApi} />
+        <section id="request">
+          <div>Request Method: {this.state.requestParams.method}</div>
+          <div>URL: {this.state.requestParams.url}</div>
+        </section>
         <Results data={this.state.data} />
+        <div id="clear"></div>
         <Footer />
       </React.Fragment>
     );

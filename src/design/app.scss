@@ -16,19 +16,33 @@ body {
     height: 100%;
   }
 
+  #request {
+    margin: 0 auto 1.5rem auto;
+    text-align: center;
+  }
+
+  #clear {
+    min-height: 7rem;
+  }
+
   footer {
-    background: darken($backgroundColor, 50);
-    border-top: 1px solid #eee;
+    background-color: rgba(0,0,0,0.5);
     padding: 1em 3em;
+    position: fixed;
+    width: 100%;
     margin: 0;
+    bottom: 0;
   }
 
   header {
-    background: darken($backgroundColor, 75);
-    border-bottom: 1px solid #eee;
+    background-color: rgba(0,0,0,0.75);
     color: #eee;
+    max-height: 20rem;
     padding: 0;
+    position: fixed;
+    width: 100%;
     margin: 0;
+    top: 0;
     text-align: center;
   }
 }
