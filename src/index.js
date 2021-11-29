@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import App from './app.js';
+import App from './App';
 import './design/index.scss';
 
 class Main extends React.Component {
