@@ -1,6 +1,6 @@
 //npm run build to deploy anywhere
 
-import React from 'react';
+import { useState } from 'react';
 import axios from 'axios';
 import './design/app.scss';
 
@@ -9,42 +9,49 @@ import Footer from './components/footer/Footer';
 import Form from './components/form/Form';
 import Results from './components/results/Results';
 
-class App extends React.Component {
+function App() {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      data: null,
-      requestParams: {},
-    };
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     data: null,
+  //     requestParams: {},
+  //   };
+  // }
+  const [data, setData] = useState(null);
+  const [requestParams, setRequestParams] = useState({});
 
-  callApi = async (requestParams) => {
-    let API_URL = requestParams.url;
+  const callApi = async (formParams) => {
+    console.log(requestParams, formParams);
+    let API_URL = formParams.url;
     const response = await axios.get(API_URL);
     const data = {
       Headers: response.headers,
       count: response.data.count,
       Response: response.data.results
     };
-    this.setState({ data, requestParams });
-  }
+    // this.setState({ data, requestParams });
+    setData(data);
+    console.log({ ...requestParams, ...formParams });
+    setRequestParams({ ...requestParams, ...formParams });
+  };
 
-  render() {
-    return (
-      <React.Fragment>
-        <Header />
-        <Form handleApiCall={this.callApi} />
-        <section id="request">
-          <div>Request Method: {this.state.requestParams.method}</div>
-          <div>URL: {this.state.requestParams.url}</div>
-        </section>
-        <Results data={this.state.data} />
-        <div id="clear"></div>
-        <Footer />
-      </React.Fragment>
-    );
-  }
+  return (
+    <>
+      <Header />
+      <Form
+        setRequestParams={setRequestParams}
+        requestParams={requestParams}
+        handleApiCall={callApi} />
+      <section id="request">
+        <h3>Request Method: {requestParams.method}</h3>
+        <h3>URL: {requestParams.url}</h3>
+      </section>
+      {data ? <Results data={data} /> : <p id="loading">Loading...</p>}
+      <div id="clear" />
+      <Footer />
+    </>
+  );
 }
 
 export default App;

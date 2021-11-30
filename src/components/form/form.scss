@@ -3,8 +3,9 @@ $radius: 40%;
 
 form {
   display: inline-block;
-  margin: 8rem auto 1.5rem auto;
+  margin: 8rem auto 0 auto;
   width: 200px;
+  justify-content: center;
 
   label {
     display: flex;
@@ -18,23 +19,24 @@ form {
 
     #urlInput {
       border: none;
-      border-bottom: thin solid deepskyblue;
+      border-bottom: thin solid #526e76;
+      font-size: 1.1rem;
       min-width: 25rem;
       margin: .4rem;
       height: 1.5rem;
     }
 
     #go {
-      background-color: lightpink;
+      background-color: #e4a186;
       border: none;
-      padding: .25rem .5rem;
+      padding: .35rem .6rem;
       border-radius: 5px;
       cursor: pointer;
       font-weight: 700;
 
       &:hover {
-        background: deeppink;
         color: white;
+        background: #d67047;
         transition: .2s ease-in-out;
         transform: scale(1.1);
       }
@@ -43,26 +45,38 @@ form {
     &.methods {
       justify-content: center;
       span {
+        color: black;
+        border: none;
         cursor: pointer;
-        margin: 0rem .3rem;
-        padding: .25rem .5rem;
-        background: lightblue;
+        margin: .25rem .3rem 0 .3rem;
+        padding: .35rem .6rem;
+        background: #b5d6ef;
         border-radius: 5px;
         font-weight: 700;
 
         &:hover {
-          background: deepskyblue;
+          background: #526e76;
           color: white;
           transition: .2s ease-in-out;
           transform: scale(1.1);
         }
 
         &.active {
-          background: black;
+          background: #d67047;
           color: white;
           transform: scale(1.1);
+          z-index: -1 ;
         }
       }
     }
+  }
+  #textArea {
+    min-width: 20rem;
+    min-height: 8rem;
+    margin: 1rem 0 0 -5rem;
+    border: thin solid rgb(187, 187, 187);
+    box-shadow: 0px 3px 8px lightgray;
+    border-radius: 5px;
+    padding: 1rem;
   }
 }
