@@ -5,14 +5,7 @@ function Form(props) {
 
   const [requestData, setRequestData] = useState('');
   const [requestUrl, setRequestUrl] = useState('');
-  // const [methodValue, setMethodValue] = useState('');
   const [activeMethod, setActiveMethod] = useState('');
-
-
-  // const handleInput = (e) => {
-  //   let { value } = e.target;
-  //   setRequestUrl(value);
-  // };
 
   const handleClick = (e) => {
     let method = e.target.id.toUpperCase();
