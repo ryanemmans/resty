@@ -11,18 +11,10 @@ import Results from './components/results/Results';
 
 function App() {
 
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     data: null,
-  //     requestParams: {},
-  //   };
-  // }
   const [data, setData] = useState(null);
   const [requestParams, setRequestParams] = useState({});
 
   const callApi = async (formParams) => {
-    console.log(requestParams, formParams);
     let API_URL = formParams.url;
     const response = await axios.get(API_URL);
     const data = {
@@ -30,7 +22,6 @@ function App() {
       count: response.data.count,
       Response: response.data.results
     };
-    // this.setState({ data, requestParams });
     setData(data);
     console.log({ ...requestParams, ...formParams });
     setRequestParams({ ...requestParams, ...formParams });
