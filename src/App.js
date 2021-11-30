@@ -44,8 +44,8 @@ function App() {
         requestParams={requestParams}
         handleApiCall={callApi} />
       <section id="request">
-        <div>Request Method: {requestParams.method}</div>
-        <div>URL: {requestParams.url}</div>
+        <h3>Request Method: {requestParams.method}</h3>
+        <h3>URL: {requestParams.url}</h3>
       </section>
       {data ? <Results data={data} /> : <p id="loading">Loading...</p>}
       <div id="clear" />

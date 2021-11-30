@@ -3,7 +3,7 @@ $radius: 40%;
 
 form {
   display: inline-block;
-  margin: 8rem auto 1.5rem auto;
+  margin: 8rem auto 0 auto;
   width: 200px;
   justify-content: center;
 
@@ -20,6 +20,7 @@ form {
     #urlInput {
       border: none;
       border-bottom: thin solid #526e76;
+      font-size: 1.1rem;
       min-width: 25rem;
       margin: .4rem;
       height: 1.5rem;
@@ -64,6 +65,7 @@ form {
           background: #d67047;
           color: white;
           transform: scale(1.1);
+          z-index: -1 ;
         }
       }
     }

@@ -51,7 +51,7 @@ function Form(props) {
     <>
       <form id="form" onSubmit={handleSubmit}>
         <label className="input">
-          <span>URL: </span>
+          <h4>URL: </h4>
           <input id="urlInput" onChange={(e) => setRequestUrl(e.target.value)} name='url' type='text' />
           <button id="go" type="submit">GO!</button>
         </label>
