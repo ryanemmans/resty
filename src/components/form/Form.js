@@ -45,7 +45,7 @@ function Form(props) {
       <form id="form" onSubmit={handleSubmit}>
         <label className="input">
           <h4>URL: </h4>
-          <input id="urlInput" onChange={(e) => setRequestUrl(e.target.value)} name='url' type='text' />
+          <input placeholder="example: https://randomuser.me/api/" id="urlInput" onChange={(e) => setRequestUrl(e.target.value)} name='url' type='text' />
           <button id="go" type="submit">GO!</button>
         </label>
         <label className="methods">
