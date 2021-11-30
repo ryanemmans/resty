@@ -1,5 +1,5 @@
-import React from 'react';
 import { useEffect } from 'react';
+import ReactJson from 'react-json-view';
 import './results.scss';
 
 
@@ -15,7 +15,12 @@ function Results(props) {
 
   return (
     <section id="results">
-      <pre data-testid="data">{props.data ? JSON.stringify(props.data, undefined, 2) : <p>Awaiting input.</p>}</pre>
+      <pre data-testid="data">
+        {props.data
+          ? <ReactJson src={props.data} theme="rjv-default" />
+          : null
+        }
+      </pre>
     </section>
   );
 }
