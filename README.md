@@ -38,7 +38,7 @@ Connect RESTy to live APIs, fetching and displaying remote data. Our primary foc
 
 ## Links to application deployment
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/d58ff022-7ce6-420e-b35a-385968f46a2f/deploy-status)](https://app.netlify.com/sites/ryanemmans-resty/deploys)  
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d58ff022-7ce6-420e-b35a-385968f46a2f/deploy-status)](https://ryanemmans-resty.netlify.app/)  
 [GitHub Actions](https://github.com/ryanemmans/resty/actions)  
 [Pull Requests](https://github.com/ryanemmans/resty/pulls?q=is%3Apr+is%3Aclosed)
 
