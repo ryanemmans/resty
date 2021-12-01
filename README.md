@@ -36,11 +36,18 @@ Connect RESTy to live APIs, fetching and displaying remote data. Our primary foc
 - As a user, I want to enter the URL to an API and issue a GET request so that I can retrieve it’s data.
 - As a user, I want to see the results returned from an API request in my browser in a readable format.
 
+### **Phase 4 Requirements**
+
+In phase 4, we will be tracking every API call and storing it in history
+
+- As a user, I want to see a list of my previous API calls, so that I can see the results again, quickly.
+
 ## Links to application deployment
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/d58ff022-7ce6-420e-b35a-385968f46a2f/deploy-status)](https://ryanemmans-resty.netlify.app/)  
+[GitHub Pages](https://ryanemmans.github.io/resty/)  
 [GitHub Actions](https://github.com/ryanemmans/resty/actions)  
-[Pull Requests](https://github.com/ryanemmans/resty/pulls?q=is%3Apr+is%3Aclosed)
+[Pull Requests](https://github.com/ryanemmans/resty/pulls?q=is%3Apr+is%3Aclosed)  
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d58ff022-7ce6-420e-b35a-385968f46a2f/deploy-status)](https://ryanemmans-resty.netlify.app/)
 
 ## UML
 
